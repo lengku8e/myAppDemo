@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="databind.TabModel.Tab"/>
+        <variable
+            name="model"
+            type = "databind.TabModel"/>
+        <variable
+            name="tabPresent"
+            type = "databind.TabPresent"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:onClick="@{() -> tabPresent.clickTab(Tab.Taxi)}"
+                android:background="@drawable/ic_launcher_background">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出租车"
+                    android:textColor="@{model.tabObservableField == Tab.Taxi ? @color/aihomeTabSelected : @color/aihomeTabDefault}"
+                    android:id="@+id/text1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{() -> tabPresent.clickTab(Tab.Express)}"
+                android:background="@drawable/ic_launcher_background">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快车"
+                    android:textColor="@{model.tabObservableField == Tab.Express ? @color/aihomeTabSelected : @color/aihomeTabDefault}"
+                    android:id="@+id/text2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{() -> tabPresent.clickTab(Tab.Special)}"
+                android:background="@drawable/ic_launcher_background">
+                <TextView
+                    android:text="专车"
+                    android:textColor="@{model.tabObservableField == Tab.Special ? @color/aihomeTabSelected : @color/aihomeTabDefault}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text3"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

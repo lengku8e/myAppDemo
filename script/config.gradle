@@ -1,0 +1,36 @@
+ext{
+    javaVersion = JavaVersion.VERSION_1_7
+    javaMaxHeapSize = '2G'
+    compileSdkVersion = 28
+    buildToolsVersion = "28.0.3"
+    minSdkVersion = 21
+    targetSdkVersion = 26
+
+    versionCode = 1
+    versionName = "1.1.0"
+    applicationId = "com.sunhailong.Demo"
+
+    enableBuildNative = false
+    enableAspectj = false
+    enableXraySdk = false
+    installAfterBuild = false
+    enableCmake = false
+
+    // 开启instantRun
+    instantRun = false
+    // 自定义 multiDex
+    customMultiDex = false
+    // resguard
+    enableResguard = true
+
+    dependencies = [
+            "android-annotations"           : 'com.android.support:support-annotations:27.0.2',
+            "android-appcompat-v7"          : 'com.android.support:appcompat-v7:27.0.2',
+            "android-support-v4"            : 'com.android.support:support-v4:27.0.2',
+            "android-recyclerview"          : 'com.android.support:recyclerview-v7:27.0.2',
+            "mylog"               : project('mylog'),
+            "uidatabinding"               : project('uidatabinding'),
+            "uimvvm"               : project('uimvvm'),
+    ]
+
+}
