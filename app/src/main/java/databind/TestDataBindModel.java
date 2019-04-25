@@ -1,13 +1,13 @@
 package databind;
 
-import com.example.lifecycledemo.MainActivity;
+import com.example.lifecycledemo.DataBindingActivity;
 import com.example.uidatabinding.databinding.core.AbsStore;
 
-public class TestDataBindModel extends AbsStore<MainActivity> {
+public class TestDataBindModel extends AbsStore<DataBindingActivity> {
 
 
-    public TestDataBindModel(MainActivity mainActivity) {
-        super(mainActivity);
+    public TestDataBindModel(DataBindingActivity dataBindingActivity) {
+        super(dataBindingActivity);
     }
 
 

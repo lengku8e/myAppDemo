@@ -13,7 +13,7 @@ import android.os.Build;
 public class MLog {
 
     public static  boolean DEBUG = BuildConfig.DEBUG ;
-    private static final String  TAG   = "BaiduMapLog";
+    private static final String  TAG = "MyLog";
 
     public static void setDebug(boolean debug) {
         DEBUG = debug;

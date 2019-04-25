@@ -34,4 +34,5 @@ dependencies {
     implementation rootProject.ext.dependencies["android-recyclerview"]
     implementation rootProject.ext.dependencies["uidatabinding"]
     implementation rootProject.ext.dependencies["uimvvm"]
+    implementation project(path: ':mylog')
 }

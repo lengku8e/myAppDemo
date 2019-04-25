@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity">
+        <activity android:name="bindertest.BinderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,13 @@
             </intent-filter>
         </activity>
         <activity android:name="pagestack.FrameActivityTest" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".DataBindingActivity" />
         <activity android:name=".BaseActivity" />
+
+
+        <service android:name="bindertest.CalculateService"
+            android:process=".remote">
+        </service>
     </application>
 
 </manifest>

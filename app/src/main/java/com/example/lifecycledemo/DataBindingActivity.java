@@ -13,10 +13,10 @@ import databind.User;
 import lifecycle.MainPresenter;
 import pagestack.FrameActivityTest;
 
-public class MainActivity extends AppCompatActivity {
+public class DataBindingActivity extends AppCompatActivity {
 
     private MainPresenter minPresenter;
-    private ActivityMainBinding binding;
+    private ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
     User user;
 
     @Override
@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         minPresenter = new MainPresenter(this);
         getLifecycle().addObserver(minPresenter);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         user = new User();
         user.setAge("18");
         user.setName("long");
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 user.notifyPropertyChanged(BR.sex);
                 user.setName("sunhailong");
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, FrameActivityTest.class);
+                intent.setClass(DataBindingActivity.this, FrameActivityTest.class);
                 startActivity(intent);
             }
         });
