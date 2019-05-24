@@ -1,1 +1,1 @@
-include ':app', ':uimvvm', ':uidatabinding', ':mylog'
+include ':app', ':uimvvm', ':uidatabinding', ':mylog', ':reflectdemo'

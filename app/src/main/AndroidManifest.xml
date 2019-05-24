@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="bindertest.BinderActivity">
+        <activity android:name="bindertest.SumBinderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,6 +27,10 @@
 
         <service android:name="bindertest.CalculateService"
             android:process=".remote">
+        </service>
+
+        <service android:name="bindertest.SumService"
+            android:process=".sumservice">
         </service>
     </application>
 
