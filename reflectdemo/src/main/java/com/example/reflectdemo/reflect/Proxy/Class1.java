@@ -1,4 +1,4 @@
-package reflect.Proxy;
+package com.example.reflectdemo.reflect.Proxy;
 
 public class Class1 implements Class1Interface {
 
